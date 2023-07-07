@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+:root {
+    /* =============== main ============= */
+
+    --Marine-blue: #02295a;
+    --Purplish-blue: #473dff;
+    --Pastel-blue: #adbeff;
+    --Light-blue: #bfe2fd;
+    --Strawberry-red: #ed3548;
+
+    /* =============== Neutral ============= */
+
+    --Cool-gray: #9699ab;
+    --Light-gray: #d6d9e6;
+    --Magnolia: #f0f6ff;
+    --Alabaster: #fafbff;
+    --White: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--Magnolia)
+}
+
+section {
+    flex: 2;
+    padding: 40px 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+section .header h2 {
+    color: var(--Marine-blue);
+    margin-bottom: 10px;
+}
+
+section .header p {
+    color: var(--Cool-gray);
+    font-size: 14px;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nextBtn {
+    border: none;
+    background-color: var(--Marine-blue);
+    padding: 10px 15px;
+    color: var(--White);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+#prevBtn {
+    border: none;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: var(--Cool-gray);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+.select-plan #prevBtn:hover {
+    color: var(--Marine-blue);
+}
+
+/* ===================================================================================== */
+/* ===================================================================================== */
+
+.container {
+    width: 800px;
+    height: 500px;
+    background-color: var(--White);
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.select-menu {
+    background: url(images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: var(--White);
+    flex: 1;
+    padding: 30px;
+}
+
+.select-menu .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.select-menu .steps .step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.select-menu .steps .number {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+.select-menu .steps .number.active {
+    background-color: var(--Light-blue);
+    border: none;
+    color: var(--Marine-blue);
+    line-height: 30px;
+}
+
+.select-menu .steps .details {
+    text-transform: uppercase;
+}
+
+.select-menu .steps .details span {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Cool-gray);
+}
+
+.select-menu .steps .details h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ===================================================================================== */
+/* ===================================================================================== */
+
+.personal-info {
+    display: none;
+}
+
+.personal-info form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.personal-info .input {
+    position: relative;
+}
+
+.personal-info form .input .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.personal-info form .input .top .error-span {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--Strawberry-red);
+    display: none;
+}
+
+.personal-info .input span {
+    color: var(--Marine-blue);
+    font-size: 14px;
+}
+
+.personal-info form input {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid var(--Light-gray);
+    padding: 10px;
+    color: var(--Marine-blue);
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.personal-info form input:focus {
+    outline: none;
+    border: 1px solid var(--Purplish-blue);
+}
+
+::placeholder {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Cool-gray);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.personal-info .next-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.personal-info .next-btn button {
+    border: none;
+    background-color: var(--Marine-blue);
+    padding: 10px 15px;
+    color: var(--White);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+
+/* ===================================================================================== */
+/* ===================================================================================== */
+
+.select-plan {
+    display: none;
+}
+
+.select-plan .plans {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.select-plan .plan {
+    flex: 1;
+    border: 1px solid var(--Light-gray);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.select-plan .plan.active,
+.select-plan .plan:hover {
+    border: 1px solid var(--Purplish-blue);
+}
+
+.select-plan .plans .plan .title .name {
+    color: var(--Marine-blue);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.select-plan .plans .plan .title .month-salary,
+.select-plan .plans .plan .title .year-salary {
+    color: var(--Cool-gray);
+    font-size: 14px;
+    margin-block: 5px;
+}
+
+.select-plan .plans .plan .title .year-salary {
+    display: none;
+}
+
+.select-plan .plans .plan .title .add-ons {
+    color: var(--Marine-blue);
+    font-size: 12px;
+    font-weight: 500;
+    display: none;
+}
+
+.select-plan .plan-option {
+    text-align: center;
+}
+
+.plan-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.plan-option .monthly {
+    color: var(--Marine-blue);
+    font-weight: 500;
+}
+
+.plan-option .yearly {
+    color: var(--Cool-gray);
+    font-weight: 500;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Marine-blue);
+    border-radius: 34px;
+    transition: background-color 0.2s;
+}
+
+.switch label::before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 5px;
+    bottom: 6px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.switch input:checked+label {
+    background-color: var(--Marine-blue);
+}
+
+.switch input:checked+label::before {
+    transform: translateX(26px);
+    background-color: white;
+}
+
+/* ===================================================================================== */
+/* ===================================================================================== */
+
+.add-ons {
+    display: flex;
+}
+
+.add-ons .adds {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.add-ons .add {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--Light-gray);
+    border-radius: 10px;
+}
+
+.add-ons .add:hover,
+.add-ons .add.active {
+    border: 1px solid var(--Purplish-blue);
+}
+
+.add-ons .add label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-ons .add label .head {
+    color: var(--Marine-blue);
+    font-weight: 700;
+}
+
+.add-ons .add label p {
+    color: var(--Cool-gray);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.add-ons .add label .salary {
+    color: var(--Purplish-blue);
+    font-size: 14px;
+}

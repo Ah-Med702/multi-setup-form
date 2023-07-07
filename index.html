@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>multi setup form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="select-menu">
+            <div class="steps">
+                <div class="step step-1">
+                    <div class="number active">1</div>
+                    <div class="details">
+                        <span>step 1</span>
+                        <h3>your info</h3>
+                    </div>
+                </div>
+                <div class="step step-2">
+                    <div class="number">2</div>
+                    <div class="details">
+                        <span>step 2</span>
+                        <h3>select plan</h3>
+                    </div>
+                </div>
+                <div class="step step-3">
+                    <div class="number">3</div>
+                    <div class="details">
+                        <span>step 3</span>
+                        <h3>add-ons</h3>
+                    </div>
+                </div>
+                <div class="step step-4">
+                    <div class="number">4</div>
+                    <div class="details">
+                        <span>step 4</span>
+                        <h3>summary</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="personal-info">
+            <div class="header">
+                <h2>Personal info</h2>
+                <p>Please provide your name,email address and phone number.</p>
+            </div>
+            <form>
+                <div class="input name-input">
+                    <div class="top">
+                        <span>Name</span>
+                        <div class="error-span">This field is required</div>
+                    </div>
+                    <input id="name" type="text" placeholder="e.g. Ahmed Bondok">
+                </div>
+                <div class="input email-input">
+                    <div class="top">
+                        <span>Email address</span>
+                        <div class="error-span">This field is required</div>
+                    </div>
+                    <input id="email" type="email" placeholder="e.g. ahmedbondok@lorem.com">
+                </div>
+                <div class="input phone-input">
+                    <div class="top">
+                        <span>Phone number</span>
+                        <div class="error-span">This field is required</div>
+                    </div>
+                    <input id="phone" type="number" placeholder="e.g. 0123 456 7890">
+                </div>
+            </form>
+            <div class="next-btn" id="nextBtn"><button>Next Step</button></div>
+        </section>
+        <section class="select-plan">
+            <div class="header">
+                <h2>Select your plan</h2>
+                <p>You have the option of monthly or yearly billing.</p>
+            </div>
+            <div class="plans">
+                <div class="plan arcade active">
+                    <div class="icon"><img src="images/icon-arcade.svg" alt="icon-arcade"></div>
+                    <div class="title">
+                        <div class="name">Arcade</div>
+                        <div class="month-salary">$9/mo</div>
+                        <div class="year-salary">$90/yr</div>
+                        <div class="add-ons">2 months free</div>
+                    </div>
+                </div>
+                <div class="plan advanced">
+                    <div class="icon"><img src="images/icon-advanced.svg" alt="icon-advanced"></div>
+                    <div class="title">
+                        <div class="name">Advanced</div>
+                        <div class="month-salary">$12/mo</div>
+                        <div class="year-salary">$120/yr</div>
+                        <div class="add-ons">2 months free</div>
+                    </div>
+                </div>
+                <div class="plan pro">
+                    <div class="icon"><img src="images/icon-pro.svg" alt="icon-pro"></div>
+                    <div class="title">
+                        <div class="name">Pro</div>
+                        <div class="month-salary">$15/mo</div>
+                        <div class="year-salary">$150/yr</div>
+                        <div class="add-ons">2 months free</div>
+                    </div>
+                </div>
+            </div>
+            <div class="plan-option">
+                <span class="monthly">Monthly</span>
+                <div class="switch">
+                    <input type="checkbox" id="switch-1">
+                    <label for="switch-1"></label>
+                </div>
+                <span class="yearly">Yearly</span>
+            </div>
+            <div class="btns">
+                <button id="prevBtn">Go Back</button>
+                <button id="nextBtn">Next Step</button>
+            </div>
+        </section>
+        <section class="add-ons">
+            <div class="header">
+                <h2>Pick add-ons</h2>
+                <p>Add-ons help enhance your gaming experience.</p>
+            </div>
+            <div class="adds">
+                <div class="add onlineService">
+                    <input type="checkbox" id="onlineService" checked>
+                    <label for="onlineService" class="onlineService">
+                        <div class="main">
+                            <div class="head">Online service</div>
+                            <p>Access to multiplayer games</p>
+                        </div>
+                        <div class="salary">+$1/mo</div>
+                    </label>
+                </div>
+                <div class="add largerStorage">
+                    <input type="checkbox" id="largerStorage">
+                    <label for="largerStorage" class="largerStorage">
+                        <div class="main">
+                            <div class="head">Larger storage</div>
+                            <p>Extra 1TB of cloud save</p>
+                        </div>
+                        <div class="salary">+$2/mo</div>
+                    </label>
+                </div>
+                <div class="add customizableProfile">
+                    <input type="checkbox" id="customizableProfile">
+                    <label for="customizableProfile" class="customizableProfile">
+                        <div class="main">
+                            <div class="head">Customizable profile</div>
+                            <p>Custom theme on your profile</p>
+                        </div>
+                        <div class="salary">+$2/mo</div>
+                    </label>
+                </div>
+            </div>
+            <div class="btns">
+                <button id="prevBtn">Go Back</button>
+                <button id="nextBtn">Next Step</button>
+            </div>
+        </section>
+        <script src="script.js"></script>
+</body>
+
+</html>
