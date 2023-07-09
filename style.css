@@ -34,7 +34,6 @@ section {
     padding: 40px 40px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 40px;
 }
 
@@ -46,6 +45,10 @@ section .header h2 {
 section .header p {
     color: var(--Cool-gray);
     font-size: 14px;
+}
+
+.year-salary {
+    display: none;
 }
 
 .btns {
@@ -106,19 +109,19 @@ section .header p {
     padding: 30px;
 }
 
-.select-menu .steps {
+.select-menu .menu-steps {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.select-menu .steps .step {
+.select-menu .menu-steps .menu-step {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.select-menu .steps .number {
+.select-menu .menu-steps .number {
     width: 30px;
     height: 30px;
     font-size: 14px;
@@ -129,34 +132,30 @@ section .header p {
     border-radius: 50%;
 }
 
-.select-menu .steps .number.active {
+.select-menu .menu-steps .number.active {
     background-color: var(--Light-blue);
     border: none;
     color: var(--Marine-blue);
     line-height: 30px;
 }
 
-.select-menu .steps .details {
+.select-menu .menu-steps .details {
     text-transform: uppercase;
 }
 
-.select-menu .steps .details span {
+.select-menu .menu-steps .details span {
     font-size: 12px;
     font-weight: 500;
     color: var(--Cool-gray);
 }
 
-.select-menu .steps .details h3 {
+.select-menu .menu-steps .details h3 {
     font-size: 16px;
     font-weight: 500;
 }
 
 /* ===================================================================================== */
 /* ===================================================================================== */
-
-.personal-info {
-    display: none;
-}
 
 .personal-info form {
     display: flex;
@@ -219,14 +218,16 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
-.personal-info .next-btn {
+.personal-info .next-btn-div {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-color: white;
 }
 
 .personal-info .next-btn button {
+    width: fit-content;
     border: none;
     background-color: var(--Marine-blue);
     padding: 10px 15px;
@@ -240,10 +241,6 @@ input[type=number] {
 
 /* ===================================================================================== */
 /* ===================================================================================== */
-
-.select-plan {
-    display: none;
-}
 
 .select-plan .plans {
     display: flex;
@@ -277,10 +274,6 @@ input[type=number] {
     color: var(--Cool-gray);
     font-size: 14px;
     margin-block: 5px;
-}
-
-.select-plan .plans .plan .title .year-salary {
-    display: none;
 }
 
 .select-plan .plans .plan .title .add-ons {
@@ -357,8 +350,15 @@ input[type=number] {
 /* ===================================================================================== */
 /* ===================================================================================== */
 
-.add-ons {
-    display: flex;
+.add-ons .checked-error-span {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(20%);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--Strawberry-red);
 }
 
 .add-ons .adds {
@@ -399,7 +399,101 @@ input[type=number] {
     margin-top: 5px;
 }
 
-.add-ons .add label .salary {
+.add-ons .add label .month-salary,
+.add-ons .add label .year-salary {
     color: var(--Purplish-blue);
     font-size: 14px;
+}
+
+/* ===================================================================================== */
+/* ===================================================================================== */
+
+.summary .summary-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary .summary-list .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    color: var(--Marine-blue);
+    font-weight: 500;
+}
+
+.summary .summary-list .head .title .bottom {
+    color: var(--Cool-gray);
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.summary .summary-list .head .title .bottom span{
+    cursor: pointer;
+}
+
+.summary .summary-list .items {
+    padding: 20px 0;
+}
+
+.summary .summary-list .items .item,
+.summary .summary-list .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: var(--Cool-gray);
+}
+
+.summary .summary-list .items .item .head{
+    color: var(--Cool-gray);
+}
+.summary .summary-list .items .item p{
+    display: none;
+}
+
+.summary .summary-list .items .item .month-salary,
+.summary .summary-list .items .item .year-salary {
+    color: var(--Marine-blue);
+}
+
+.summary .summary-list .total .salary {
+    color: var(--Purplish-blue);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* ===================================================================================== */
+/* ===================================================================================== */
+
+.thank-you {
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you img {
+    width: 100px;
+    height: 100px;
+}
+
+.thank-you .header h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.thank-you .header p {
+    text-align: center;
+}
+
+.thank-you .header p span {
+    color: var(--Marine-blue);
+}
+
+
+.step {
+    display: none;
+}
+
+.step-1 {
+    display: flex;
 }

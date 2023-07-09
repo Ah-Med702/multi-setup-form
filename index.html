@@ -11,29 +11,29 @@
 <body>
     <div class="container">
         <div class="select-menu">
-            <div class="steps">
-                <div class="step step-1">
-                    <div class="number active">1</div>
+            <div class="menu-steps">
+                <div class="menu-step menu-step-1">
+                    <div class="number">1</div>
                     <div class="details">
                         <span>step 1</span>
                         <h3>your info</h3>
                     </div>
                 </div>
-                <div class="step step-2">
+                <div class="menu-step menu-step-2">
                     <div class="number">2</div>
                     <div class="details">
                         <span>step 2</span>
                         <h3>select plan</h3>
                     </div>
                 </div>
-                <div class="step step-3">
+                <div class="menu-step menu-step-3">
                     <div class="number">3</div>
                     <div class="details">
                         <span>step 3</span>
                         <h3>add-ons</h3>
                     </div>
                 </div>
-                <div class="step step-4">
+                <div class="menu-step menu-step-4">
                     <div class="number">4</div>
                     <div class="details">
                         <span>step 4</span>
@@ -42,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <section class="personal-info">
+        <section class="step personal-info">
             <div class="header">
                 <h2>Personal info</h2>
                 <p>Please provide your name,email address and phone number.</p>
@@ -51,28 +51,28 @@
                 <div class="input name-input">
                     <div class="top">
                         <span>Name</span>
-                        <div class="error-span">This field is required</div>
+                        <div class="error-span"></div>
                     </div>
                     <input id="name" type="text" placeholder="e.g. Ahmed Bondok">
                 </div>
                 <div class="input email-input">
                     <div class="top">
                         <span>Email address</span>
-                        <div class="error-span">This field is required</div>
+                        <div class="error-span"></div>
                     </div>
                     <input id="email" type="email" placeholder="e.g. ahmedbondok@lorem.com">
                 </div>
                 <div class="input phone-input">
                     <div class="top">
                         <span>Phone number</span>
-                        <div class="error-span">This field is required</div>
+                        <div class="error-span"></div>
                     </div>
                     <input id="phone" type="number" placeholder="e.g. 0123 456 7890">
                 </div>
             </form>
-            <div class="next-btn" id="nextBtn"><button>Next Step</button></div>
+            <div class="next-btn-div"><button class="step-1-btn" id="nextBtn">Next Step</button></div>
         </section>
-        <section class="select-plan">
+        <section class="step select-plan">
             <div class="header">
                 <h2>Select your plan</h2>
                 <p>You have the option of monthly or yearly billing.</p>
@@ -116,52 +116,89 @@
             </div>
             <div class="btns">
                 <button id="prevBtn">Go Back</button>
-                <button id="nextBtn">Next Step</button>
+                <button class="step-2-btn" id="nextBtn">Next Step</button>
             </div>
         </section>
-        <section class="add-ons">
+        <section class="step add-ons">
             <div class="header">
                 <h2>Pick add-ons</h2>
                 <p>Add-ons help enhance your gaming experience.</p>
+                <span class="checked-error-span"> Please select an option</span>
             </div>
             <div class="adds">
-                <div class="add onlineService">
-                    <input type="checkbox" id="onlineService" checked>
-                    <label for="onlineService" class="onlineService">
-                        <div class="main">
+                <div class="add">
+                    <input type="checkbox" id="checkbox-1">
+                    <label for="checkbox-1" class="add-label">
+                        <div class="main"> 
                             <div class="head">Online service</div>
                             <p>Access to multiplayer games</p>
                         </div>
-                        <div class="salary">+$1/mo</div>
+                        <div class="month-salary">+$<span>1</span>/mo</div>
+                        <div class="year-salary">+$<span>10</span>/yr</div>
                     </label>
                 </div>
-                <div class="add largerStorage">
-                    <input type="checkbox" id="largerStorage">
-                    <label for="largerStorage" class="largerStorage">
+                <div class="add">
+                    <input type="checkbox" id="checkbox-2">
+                    <label for="checkbox-2" class="add-label">
                         <div class="main">
                             <div class="head">Larger storage</div>
                             <p>Extra 1TB of cloud save</p>
                         </div>
-                        <div class="salary">+$2/mo</div>
+                        <div class="month-salary">+$<span>2</span>/mo</div>
+                        <div class="year-salary">+$<span>20</span>/yr</div>
                     </label>
                 </div>
-                <div class="add customizableProfile">
-                    <input type="checkbox" id="customizableProfile">
-                    <label for="customizableProfile" class="customizableProfile">
+                <div class="add">
+                    <input type="checkbox" id="checkbox-3">
+                    <label for="checkbox-3" class="add-label">
                         <div class="main">
                             <div class="head">Customizable profile</div>
                             <p>Custom theme on your profile</p>
                         </div>
-                        <div class="salary">+$2/mo</div>
+                        <div class="month-salary">+$<span>2</span>/mo</div>
+                        <div class="year-salary">+$<span>20</span>/yr</div>
                     </label>
                 </div>
             </div>
             <div class="btns">
                 <button id="prevBtn">Go Back</button>
-                <button id="nextBtn">Next Step</button>
+                <button class="step-3-btn" id="nextBtn">Next Step</button>
             </div>
         </section>
-        <script src="script.js"></script>
+        <section class="step step-4 summary">
+            <div class="header">
+                <h2>Finishing up</h2>
+                <p>Double-check everything looks OK before confirming</p>
+            </div>
+            <div class="summary-list">
+                <div class="head">
+                    <div class="title">
+                        <div class="top">
+                            Arcade(<span class="month-salary">Monthly</span><span class="year-salary">Yearly</span>)
+                        </div>
+                        <div class="bottom"><span>Change</span></div>
+                    </div>
+                    <div class="salary"><span class="month-salary">$9/mo</span><span class="year-salary">$90/yr</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="items">
+            </div>
+            <div class="btns">
+                <button id="prevBtn">Go Back</button>
+                <button class="step-4-btn" id="nextBtn">Next Step</button>
+            </div>
+        </section>
+        <section class="step step-5 thank-you">
+            <img src="images/icon-thank-you.svg" alt="icon-thank-you">
+            <div class="header">
+                <h2>Thank you!</h2>
+                <p>Thanks for confirming your subscription! we hope you have fun using our platform. if you ever need
+                    support, please feel free to email us at <span>support@loremgaming.com</span></p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
