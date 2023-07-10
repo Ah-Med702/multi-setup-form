@@ -146,7 +146,7 @@ plans.forEach((plan) => {
     });
 });
 
-let prevBtns = document.querySelectorAll(".prevBtn");
+let prevBtns = document.querySelectorAll(".prev-btn");
 prevBtns.forEach(function (element) {
     element.addEventListener("click", prevStep);
 });

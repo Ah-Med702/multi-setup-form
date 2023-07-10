@@ -61,7 +61,7 @@ section .header p {
     justify-content: space-between;
 }
 
-.nextBtn {
+.next-btn {
     border: none;
     background-color: var(--Marine-blue);
     padding: 10px 15px;
@@ -73,11 +73,11 @@ section .header p {
     cursor: pointer;
 }
 
-.nextBtn:hover{
+.next-btn:hover{
     background-color: var(--Pastel-blue);
 }
 
-.prevBtn {
+.prev-btn {
     border: none;
     padding: 10px 15px;
     background-color: transparent;
@@ -88,7 +88,7 @@ section .header p {
     cursor: pointer;
 }
 
-.prevBtn:hover {
+.prev-btn:hover {
     color: var(--Marine-blue);
 }
 
@@ -594,7 +594,7 @@ input[type=number] {
         height: fit-content;
     }
 
-    #nextBtn {
+    .next-btn {
         padding: 10px 10px;
         font-size: 12px;
     }
