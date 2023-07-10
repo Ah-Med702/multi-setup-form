@@ -61,7 +61,7 @@ section .header p {
     justify-content: space-between;
 }
 
-#nextBtn {
+.nextBtn {
     border: none;
     background-color: var(--Marine-blue);
     padding: 10px 15px;
@@ -73,7 +73,11 @@ section .header p {
     cursor: pointer;
 }
 
-#prevBtn {
+.nextBtn:hover{
+    background-color: var(--Pastel-blue);
+}
+
+.prevBtn {
     border: none;
     padding: 10px 15px;
     background-color: transparent;
@@ -84,7 +88,7 @@ section .header p {
     cursor: pointer;
 }
 
-.select-plan #prevBtn:hover {
+.prevBtn:hover {
     color: var(--Marine-blue);
 }
 
@@ -230,7 +234,7 @@ input[type=number] {
     background-color: white;
 }
 
-.personal-info .next-btn button {
+.personal-info .next-btn-div button {
     width: fit-content;
     border: none;
     background-color: var(--Marine-blue);
