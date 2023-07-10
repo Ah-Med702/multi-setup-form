@@ -6,7 +6,7 @@ let nameErrorSpan = document.querySelector(".name-input .top .error-span");
 let emailErrorSpan = document.querySelector(".email-input .top .error-span");
 let phoneErrorSpan = document.querySelector(".phone-input .top .error-span");
 
-let nameValid = /^[a-z0-9_-]{2,10}\s[a-z0-9_-]{2,10}$/;
+let nameValid = /^[a-z0-9_-]{2,10}\s[a-z0-9_-]{2,10}$/g;
 let emailValid = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 let phoneValid = /^[0-9]\d{10}$/;
 
